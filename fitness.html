@@ -1,0 +1,632 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Fitness Training</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#0a0a0a;
+color:white;
+line-height:1.7;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+background:black;
+position:sticky;
+top:0;
+z-index:100;
+}
+
+.logo{
+font-size:22px;
+font-weight:600;
+}
+
+/* HERO */
+
+.hero{
+height:85vh;
+background:url("fitness.jpg") center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+position:relative;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.65);
+}
+
+.hero-content{
+position:relative;
+max-width:700px;
+}
+
+.hero h1{
+font-size:60px;
+margin-bottom:20px;
+}
+
+.hero p{
+color:#ddd;
+}
+
+/* SECTION */
+
+.section{
+max-width:1100px;
+margin:auto;
+padding:100px 20px;
+}
+
+.section h2{
+font-size:34px;
+margin-bottom:20px;
+text-align:center;
+}
+
+.section p{
+text-align:center;
+color:#ccc;
+margin-bottom:40px;
+}
+
+/* FEATURES */
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:30px;
+}
+
+.feature{
+background:#141414;
+padding:35px;
+border-radius:15px;
+text-align:center;
+border:1px solid rgba(255,255,255,0.08);
+transition:.3s;
+}
+
+.feature:hover{
+transform:translateY(-10px);
+box-shadow:0 0 20px rgba(0,255,174,0.3);
+}
+
+.feature i{
+font-size:50px;
+color:#00ffae;
+margin-bottom:15px;
+}
+
+/* STATS */
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:30px;
+text-align:center;
+}
+
+.stat{
+background:#141414;
+padding:40px;
+border-radius:15px;
+}
+
+.stat h2{
+font-size:42px;
+color:#00ffae;
+}
+
+.stat p{
+color:#bbb;
+}
+
+/* BMI */
+
+.bmi-section{
+padding:100px 20px;
+display:flex;
+justify-content:center;
+}
+
+.bmi-container{
+display:flex;
+gap:40px;
+background:#1a1a1a;
+padding:40px;
+border-radius:15px;
+max-width:900px;
+width:100%;
+}
+
+.bmi-left{
+flex:1;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.bmi-left input{
+padding:12px;
+border:none;
+border-radius:8px;
+background:#111;
+color:white;
+}
+
+.bmi-left button{
+padding:14px;
+border:none;
+background:#00ffae;
+color:black;
+font-weight:bold;
+border-radius:8px;
+cursor:pointer;
+}
+
+.bmi-right{
+flex:1;
+background:#111;
+padding:25px;
+border-radius:12px;
+text-align:center;
+}
+
+.bmi-value{
+font-size:48px;
+font-weight:bold;
+margin:15px 0;
+}
+
+/* VIDEO */
+
+.video{
+text-align:center;
+margin-top:80px;
+}
+
+.video video{
+width:100%;
+max-width:750px;
+border-radius:12px;
+}
+
+/* CLIENTS */
+
+.clients{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+margin-top:50px;
+}
+
+.client{
+background:#141414;
+border-radius:15px;
+overflow:hidden;
+}
+
+.client img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.client-info{
+padding:20px;
+text-align:center;
+}
+
+.client-info b{
+color:#00ffae;
+}
+
+/* STEPS */
+
+.steps{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:30px;
+text-align:center;
+margin-top:40px;
+}
+
+.step{
+background:#141414;
+padding:35px;
+border-radius:15px;
+}
+
+.step h3{
+font-size:40px;
+color:#00ffae;
+margin-bottom:10px;
+}
+
+.join{
+text-align:center;
+margin-top:90px;
+padding:40px 20px;
+}
+
+.join h2{
+font-size:30px;
+margin-bottom:10px;
+}
+
+.join p{
+color:#ccc;
+margin-bottom:30px;
+}
+.apply-btn{
+background:#00ffae;
+color:black;
+padding:16px 40px;
+border-radius:30px;
+text-decoration:none;
+font-weight:600;
+display:inline-block;
+margin-top:10px;
+transition:.3s;
+}
+
+.apply-btn:hover{
+transform:scale(1.05);
+box-shadow:0 0 15px rgba(0,255,174,0.6);
+}
+
+/* FOOTER */
+
+footer{
+margin-top:100px;
+padding:40px 20px;
+background:#0d0d0d;
+border-top:1px solid rgba(255,255,255,0.08);
+text-align:center;
+}
+
+footer p{
+color:#777;
+font-size:14px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:38px;
+}
+
+.bmi-container{
+flex-direction:column;
+}
+
+}
+.step i{
+font-size:40px;
+color:#00ffae;
+margin-bottom:15px;
+display:block;
+}
+
+.step{
+background:#141414;
+padding:35px;
+border-radius:15px;
+transition:0.3s;
+}
+
+.step:hover{
+transform:translateY(-8px);
+box-shadow:0 0 20px rgba(0,255,174,0.3);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+<div class="logo">TrainWith Eswar</div>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+<div class="hero-content">
+<h1>Transform Your Body With Coach Eswar</h1>
+<p>Professional fitness coaching focused on strength, fat loss and injury prevention.</p>
+<p>
+Train with Coach Eswar and transform your body with a structured and 
+scientifically designed fitness program. Our training focuses on strength 
+development, fat loss, mobility improvement and long-term injury prevention. 
+Whether you are a beginner or someone looking to improve performance, this 
+program helps you build a stronger, healthier and more confident version of yourself.
+</p>
+</div>
+</section>
+
+<!-- PROGRAM FEATURES -->
+
+<div class="section">
+
+<h2>Program Features</h2>
+<p>
+Our fitness programs are carefully designed to deliver real and sustainable 
+results. Each training plan focuses on building strength, improving mobility, 
+reducing body fat and preventing injuries. The workouts are structured to suit 
+different fitness levels so that beginners and experienced individuals can 
+progress safely while improving overall performance and health.
+</p>
+
+<div class="features">
+
+<div class="feature">
+<i class="fa-solid fa-dumbbell"></i>
+<h3>Strength Training</h3>
+</div>
+
+<div class="feature">
+<i class="fa-solid fa-fire"></i>
+<h3>Fat Loss</h3>
+</div>
+
+<div class="feature">
+<i class="fa-solid fa-person-running"></i>
+<h3>Mobility Training</h3>
+</div>
+
+<div class="feature">
+<i class="fa-solid fa-shield-heart"></i>
+<h3>Injury Prevention</h3>
+</div>
+
+</div>
+</div>
+
+<!-- STATS -->
+
+<div class="section">
+
+<h2>Our Results</h2>
+<p>
+Over the years, Coach Eswar has helped hundreds of individuals achieve their 
+fitness goals through structured training and consistent guidance. From weight 
+loss transformations to strength development and mobility improvement, the 
+results speak for themselves. Our approach focuses on sustainable fitness that 
+improves both physical performance and long-term health.
+</p>
+
+<div class="stats">
+
+<div class="stat">
+<h2>500+</h2>
+<p>Clients Trained</p>
+</div>
+
+<div class="stat">
+<h2>150+</h2>
+<p>Transformations</p>
+</div>
+
+<div class="stat">
+<h2>5+</h2>
+<p>Years Experience</p>
+</div>
+
+<div class="stat">
+<h2>98%</h2>
+<p>Success Rate</p>
+</div>
+
+</div>
+</div>
+
+<!-- BMI -->
+
+<section class="bmi-section">
+
+<div class="bmi-container">
+
+<div class="bmi-left">
+
+<h2>BMI Calculator</h2>
+
+<input type="number" id="height" placeholder="Height (cm)">
+<input type="number" id="weight" placeholder="Weight (kg)">
+
+<button onclick="calculateBMI()">Calculate BMI</button>
+
+</div>
+
+<div class="bmi-right">
+
+<h3>Your Result</h3>
+
+<div class="bmi-value" id="bmiValue">--</div>
+
+<p id="bmiStatus">Enter your height and weight</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- VIDEO -->
+
+<div class="video">
+
+<h2>Training With Coach Eswar</h2>
+
+<video controls>
+
+<source src="clientv.mp4" type="video/mp4">
+
+</video>
+
+</div>
+
+<!-- CLIENTS
+
+<div class="section">
+
+<h2>Client Transformations</h2>
+<p>
+These transformations are the result of consistent training, proper guidance 
+and dedication from our clients. Every individual follows a personalized plan 
+that focuses on strength, fat loss and overall fitness improvement. The goal 
+is not only to change physical appearance but also to build healthy habits and 
+long-term lifestyle improvements.
+</p>
+
+<div class="clients">
+
+<div class="client">
+<img src="client1.jpeg">
+<div class="client-info">
+<p>"Lost 6kg in 2 months."</p>
+<b>Arun</b>
+</div>
+</div>
+
+<div class="client">
+<img src="client2.jpg">
+<div class="client-info">
+<p>"Mobility improved and knee pain reduced."</p>
+<b>Karthik</b>
+</div>
+</div>
+
+<div class="client">
+<img src="client3.jpg">
+<div class="client-info">
+<p>"Best structured fitness program."</p>
+<b>Ravi</b>
+</div>
+</div>
+
+</div>
+</div> -->
+
+<div class="section">
+
+<h2>How Training Works</h2>
+
+<div class="steps">
+
+<div class="step">
+<i class="fa-solid fa-file-circle-check"></i>
+<h3>Apply</h3>
+<p>Fill the training application form.</p>
+</div>
+
+<div class="step">
+<i class="fa-solid fa-dumbbell"></i>
+<h3>Custom Plan</h3>
+<p>Receive a personalized workout plan.</p>
+</div>
+
+<div class="step">
+<i class="fa-solid fa-person-running"></i>
+<h3>Start Training</h3>
+<p>Follow the training program step by step.</p>
+</div>
+
+<div class="step">
+<i class="fa-solid fa-chart-line"></i>
+<h3>Track Progress</h3>
+<p>Monitor your strength and body transformation.</p>
+</div>
+
+</div>
+
+</div>
+<!-- APPLY -->
+
+<div class="join">
+
+<h2>Start Your Fitness Journey</h2>
+
+<p>Apply now to train with Coach Eswar.</p>
+
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSdazOZqswUaDi1DaV9xBSDmunf1YapUN5KVOV1c_J2Ig1_Fjw/viewform" class="apply-btn" target="_blank">Apply For Training</a>
+
+</a>
+
+</div>
+
+<footer>
+
+<p>© 2026 TrainWith Eswar</p>
+
+<p>Fitness Coaching | Strength | Recovery</p>
+
+</footer>
+
+<script>
+
+function calculateBMI(){
+
+let height=document.getElementById("height").value/100;
+let weight=document.getElementById("weight").value;
+
+let bmi=weight/(height*height);
+
+let category="";
+
+if(bmi<18.5){
+category="Underweight";
+}
+else if(bmi<25){
+category="Normal Weight";
+}
+else if(bmi<30){
+category="Overweight";
+}
+else{
+category="Obese";
+}
+
+document.getElementById("bmiValue").innerText=bmi.toFixed(1);
+document.getElementById("bmiStatus").innerText=category;
+
+}
+
+</script>
+
+</body>
+</html>
+

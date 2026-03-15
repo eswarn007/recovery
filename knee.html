@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Knee Recovery Training</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#0a0a0a;color:white;line-height:1.7;}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 60px;background:black;position:sticky;top:0;z-index:100;}
+.logo{font-size:22px;font-weight:600;}
+.hero{height:85vh;background:url("knee-hero.jpg") center/cover;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;}
+.hero::before{content:"";position:absolute;width:100%;height:100%;background:rgba(0,0,0,0.65);}
+.hero-content{position:relative;max-width:700px;}
+.hero h1{font-size:60px;margin-bottom:20px;}
+.hero p{color:#ddd;margin-bottom:20px;}
+.hero p{
+color:#ddd;
+margin-bottom:20px;
+max-width:650px;
+margin-left:auto;
+margin-right:auto;
+}
+.section{max-width:1100px;margin:auto;padding:100px 20px;}
+.section h2{font-size:34px;margin-bottom:20px;text-align:center;}
+.section p{
+text-align:center;
+color:#ccc;
+margin-bottom:40px;
+max-width:700px;
+margin-left:auto;
+margin-right:auto;
+}
+.video p{
+max-width:700px;
+margin:20px auto;
+color:#ccc;
+text-align:center;
+}
+
+.join p{
+max-width:650px;
+margin:20px auto;
+color:#ccc;
+text-align:center;
+}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:30px;}
+.feature{background:#141414;padding:35px;border-radius:15px;text-align:center;border:1px solid rgba(255,255,255,0.08);transition:.3s;}
+.feature:hover{transform:translateY(-10px);box-shadow:0 0 20px rgba(0,255,174,0.3);}
+.feature i{font-size:50px;color:#00ffae;margin-bottom:15px;}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:30px;text-align:center;}
+.stat{background:#141414;padding:40px;border-radius:15px;}
+.stat h2{font-size:42px;color:#00ffae;}
+.stat p{color:#bbb;}
+.bmi-section{padding:100px 20px;display:flex;justify-content:center;}
+.bmi-container{display:flex;gap:40px;background:#1a1a1a;padding:40px;border-radius:15px;max-width:900px;width:100%;}
+.bmi-left{flex:1;display:flex;flex-direction:column;gap:15px;}
+.bmi-left input{padding:12px;border:none;border-radius:8px;background:#111;color:white;}
+.bmi-left button{padding:14px;border:none;background:#00ffae;color:black;font-weight:bold;border-radius:8px;cursor:pointer;}
+.bmi-right{flex:1;background:#111;padding:25px;border-radius:12px;text-align:center;}
+.bmi-value{font-size:48px;font-weight:bold;margin:15px 0;}
+.video{text-align:center;margin-top:80px;}
+.video video{width:100%;max-width:750px;border-radius:12px;}
+.clients{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;margin-top:50px;}
+.client{background:#141414;border-radius:15px;overflow:hidden;}
+.client img{width:100%;height:220px;object-fit:cover;}
+.client-info{padding:20px;text-align:center;}
+.client-info b{color:#00ffae;}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:30px;text-align:center;margin-top:40px;}
+.step{background:#141414;padding:35px;border-radius:15px;transition:0.3s;}
+.step i{font-size:40px;color:#00ffae;margin-bottom:15px;display:block;}
+.step:hover{transform:translateY(-8px);box-shadow:0 0 20px rgba(0,255,174,0.3);}
+.join{text-align:center;margin-top:90px;padding:40px 20px;}
+.join h2{font-size:30px;margin-bottom:10px;}
+.join p{color:#ccc;margin-bottom:30px;}
+.apply-btn{background:#00ffae;color:black;padding:16px 40px;border-radius:30px;text-decoration:none;font-weight:600;display:inline-block;margin-top:10px;transition:.3s;}
+.apply-btn:hover{transform:scale(1.05);box-shadow:0 0 15px rgba(0,255,174,0.6);}
+footer{margin-top:100px;padding:40px 20px;background:#0d0d0d;border-top:1px solid rgba(255,255,255,0.08);text-align:center;}
+footer p{color:#777;font-size:14px;}
+@media(max-width:768px){.hero h1{font-size:38px;}.bmi-container{flex-direction:column;}}
+</style>
+</head>
+<body>
+
+<nav><div class="logo">Train With Eswar</div></nav>
+
+<section class="hero">
+<div class="hero-content">
+<h1>Recover Your Knee Strength Safely</h1>
+<p>Personalized knee rehabilitation training designed to restore strength, mobility, and confidence after 
+    injury. Our structured programs focus on safe exercises, gradual progression, and proper movement techniques to support a smooth recovery process.</p>
+</div>
+</section>
+
+<div class="section">
+<h2>Knee Recovery Features</h2>
+<p>Our rehabilitation programs are built using scientifically designed exercises that focus on strengthening the muscles around the knee joint, improving flexibility, and restoring natural movement patterns to support long-term recovery.</p>
+<div class="features">
+<div class="feature"><i class="fa-solid fa-dumbbell"></i><h3>Strength Exercises</h3></div>
+<div class="feature"><i class="fa-solid fa-person-walking"></i><h3>Mobility & Flexibility</h3></div>
+<div class="feature"><i class="fa-solid fa-shield-halved"></i><h3>Injury Prevention</h3></div>
+<div class="feature"><i class="fa-solid fa-hospital-user"></i><h3>Post-Surgery Rehab</h3></div>
+</div>
+</div>
+
+<div class="section">
+<h2>Recovery Stats</h2>
+<p>Through structured rehabilitation and consistent guidance, many of our clients experience significant
+     improvements in knee strength, mobility, and pain reduction, helping them return to normal daily activities safely.</p>
+<div class="stats">
+<div class="stat"><h2>95%</h2><p>Mobility Restored</p></div>
+<div class="stat"><h2>90%</h2><p>Strength Improved</p></div>
+<div class="stat"><h2>85%</h2><p>Pain Reduced</p></div>
+</div>
+</div>
+
+<section class="bmi-section">
+<div class="bmi-container">
+<div class="bmi-left">
+<h2>BMI Calculator</h2>
+<input type="number" id="height" placeholder="Height (cm)">
+<input type="number" id="weight" placeholder="Weight (kg)">
+<button onclick="calculateBMI()">Calculate BMI</button>
+</div>
+<div class="bmi-right">
+<h3>Your Result</h3>
+<div class="bmi-value" id="bmiValue">--</div>
+<p id="bmiStatus">Enter your height and weight</p>
+</div>
+</div>
+</section>
+
+<div class="video">
+<h2>Knee Exercise Demonstration</h2>
+<p>Watch guided demonstrations of essential knee rehabilitation exercises that help strengthen surrounding 
+    muscles, improve stability, and support a safe and effective recovery journey.</p>
+<video controls>
+<source src="knee video.mp4" type="video/mp4">
+</video>
+</div>
+
+<!-- <div class="section">
+<h2>Success Stories</h2>
+<div class="clients">
+<div class="client"><img src="client1.jpg"><div class="client-info"><p>"Regained full mobility in 8 weeks."</p><b>Arun</b></div></div>
+<div class="client"><img src="client2.jpg"><div class="client-info"><p>"Reduced knee pain significantly."</p><b>Karthik</b></div></div>
+<div class="client"><img src="client3.jpg"><div class="client-info"><p>"Back to sports after injury."</p><b>Ravi</b></div></div>
+</div>
+</div> -->
+
+<div class="section">
+<h2>How Training Works</h2>
+<p>Our training process follows a structured approach that begins with understanding your 
+    condition and creating a personalized recovery plan, followed by guided exercises and continuous progress tracking.</p>
+<div class="steps">
+<div class="step"><i class="fa-solid fa-file-circle-check"></i><h3>Apply</h3><p>Fill the knee recovery form.</p></div>
+<div class="step"><i class="fa-solid fa-dumbbell"></i><h3>Custom Plan</h3><p>Receive personalized knee exercises.</p></div>
+<div class="step"><i class="fa-solid fa-person-walking"></i><h3>Start Training</h3><p>Follow exercises step by step.</p></div>
+<div class="step"><i class="fa-solid fa-chart-line"></i><h3>Track Progress</h3><p>Monitor mobility and strength improvements.</p></div>
+</div>
+</div>
+
+<div class="join">
+<h2>Start Your Knee Recovery</h2>
+<p>Take the first step toward stronger and healthier knees. Apply now to receive your personalized rehabilitation 
+    guidance and start your journey toward pain-free movement.</p>
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSepljeN9qUHdHI5dWVZNnBWu_JtWvVY4O30MDbUlt6Y5WO1GQ/viewform" class="apply-btn">Apply For Training</a>
+</div>
+
+<footer>
+<p>© 2026 KneeRecover Eswar</p>
+<p>Knee Rehabilitation | Strength | Recovery</p>
+</footer>
+
+<script>
+function calculateBMI(){
+let height=document.getElementById("height").value/100;
+let weight=document.getElementById("weight").value;
+if(height=="" || weight==""){alert("Enter height and weight");return;}
+let bmi=weight/(height*height);
+let category="";
+if(bmi<18.5){category="Underweight";}
+else if(bmi<25){category="Normal Weight";}
+else if(bmi<30){category="Overweight";}
+else{category="Obese";}
+document.getElementById("bmiValue").innerText=bmi.toFixed(1);
+document.getElementById("bmiStatus").innerText=category;
+}
+</script>
+
+</body>
+</html>
